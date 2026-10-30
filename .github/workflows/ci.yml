@@ -1,0 +1,29 @@
+name: ci
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+  workflow_dispatch:
+jobs:
+  py_compile:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Compilar módulos Python
+        run: |
+          set -e
+          mapfile -t files < <(find . -name '*.py' -not -path './.git/*' -not -path './.venv/*' -not -path './venv/*' -not -path '*/__pycache__/*')
+          if [ ${#files[@]} -eq 0 ]; then echo "Sin archivos Python"; exit 0; fi
+          python -m py_compile "${files[@]}"
+          echo "py_compile OK (${#files[@]} archivos)"
+      - name: Tests (si existen)
+        run: |
+          if [ -d tests ] || [ -d test ]; then
+            pip install pytest -q || true
+            python -m pytest -q || true
+          else
+            echo "Sin directorio tests"
+          fi

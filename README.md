@@ -1,28 +1,42 @@
 # memoria-cognitiva-ia
 
-La memoria cognitiva IA / agentes de IA: chunking de documentos, decaimiento de memoria e interfaz Streamlit.
+# memoria-cognitiva-ia  La memoria cognitiva IA / agentes de IA: chunking de documentos, decaimiento de memoria e interfaz Streamlit.  **Autor:** Lázaro López Paz · **Licencia:** MIT (ver `LICENSE`)
 
-**Autor:** Lázaro López Paz · **Licencia:** MIT (ver `LICENSE`)
+## Autoría
 
-## Carpetas de origen en Google Drive
+- **Autor:** Lázaro López Paz, El Prat de Llobregat, Barcelona, España
+- **ORCID:** [0000-0001-8601-1963](https://orcid.org/0000-0001-8601-1963)
+- Elaborado con asistencia de inteligencia artificial
+- Sin afiliaciones institucionales
 
-- https://drive.google.com/drive/folders/1W_9N78kiXGFzmDVq-mrri9x0z_wYRY39
-- https://drive.google.com/drive/folders/1KykbKJ-xzNJhCereNya7Fmq0d8vD4JiZ
+## Estado
 
-## Archivos incluidos
+Proyecto en desarrollo / documentación. No afirmar validación experimental salvo que el código o los informes del propio repositorio lo demuestren.
 
-- `doc_chunker.py` ← doc_chunker.py
-- `memory_decay.py` ← memory_decay.py
-- `ui_streamlit.py` ← ui_streamlit.py
+## Contenido (raíz)
 
-## Pendiente: en Drive
+```
+__pycache__/
+doc_chunker.py
+LICENSE
+memory_decay.py
+README.md
+REFERENCIAS.md
+ui_streamlit.py
+```
 
-Archivos binarios (presentaciones, PDFs grandes, vídeos, imágenes, zips, docx) que no se pudieron pasar a texto. Siguen en Drive:
+## Instalación
 
-- (nada pendiente)
+Ver archivos del repositorio; puede no requerir instalación.
 
----
-Los archivos `.trashed-*`, las copias («- copia») y los duplicados entre carpetas no se han listado.
+## Uso
 
-## Referencias
-Ver [REFERENCIAS.md](REFERENCIAS.md).
+Archivos Python principales (revisar cada uno antes de ejecutar):
+- `doc_chunker.py`
+- `memory_decay.py`
+- `ui_streamlit.py`
+
+
+## Licencia
+
+Ver archivo `LICENSE` (o `LICENSE.md`) en la raíz. Documentación bajo CC BY 4.0 cuando aplique; código habitualmente MIT, salvo indicación contraria.
